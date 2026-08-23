@@ -34,13 +34,15 @@ const days: Day[] = [
     items: [
       { time: '08:00–09:30', title: '飯店早餐、退房', links: [{ label: '飯店 Google Maps', href: 'https://www.google.com/maps/search/?api=1&query=Kamenoi+Hotel+Aso' }] },
       { time: '上午–下午', title: '九州自然動物公園或鶴見岳（二選一）', note: '較推薦九州自然動物公園；若天氣非常好且想看山景，再改鶴見岳。', links: [{ label: '動物園 Google Maps', href: 'https://www.google.com/maps/search/?api=1&query=African+Safari+Oita' }, { label: '動物園官方網站', href: 'https://www.africansafari.co.jp/' }, { label: '鶴見岳 Google Maps', href: 'https://www.google.com/maps/search/?api=1&query=Beppu+Ropeway' }] },
-      { time: '15:30 前後', title: '界 別府入住', note: '保留旅館活動、溫泉與晚餐時間。', links: [{ label: '界 別府 Google Maps', href: 'https://www.google.com/maps/search/?api=1&query=KAI+Beppu' }, { label: '界 別府官方網站', href: 'https://hoshinoresorts.com/zh_tw/hotels/kaibeppu/' }] },
+      { time: '15:30 前後', title: '界 別府入住', note: '保留旅館活動與溫泉時間。', links: [{ label: '界 別府 Google Maps', href: 'https://www.google.com/maps/search/?api=1&query=KAI+Beppu' }, { label: '界 別府官方網站', href: 'https://hoshinoresorts.com/zh_tw/hotels/kaibeppu/' }] },
+      { time: '17:30', title: '飯店晚餐', note: '固定用餐時間，行程請預留準時返回飯店。', reserved: true },
     ],
   },
   {
     id: 'd0323', date: '2027/03/23（二）', nav: '3/23 二', place: '由布院', title: '由布院一日遊', route: '界 別府 → 金鱗湖 → 湯之坪街道 → 由布院周邊 → 界 別府', tags: ['自駕', '由布院'], sleep: '界 別府',
     items: [
-      { time: '08:00–10:00', title: '旅館早餐、前往由布院', links: [{ label: '由布院 Google Maps', href: 'https://www.google.com/maps/search/?api=1&query=Yufuin+Oita' }] },
+      { time: '08:00', title: '飯店早餐', note: '固定用餐時間。', reserved: true },
+      { time: '09:00–10:00', title: '前往由布院', links: [{ label: '由布院 Google Maps', href: 'https://www.google.com/maps/search/?api=1&query=Yufuin+Oita' }] },
       { time: '10:15–11:30', title: '金鱗湖散步', links: [{ label: 'Google Maps', href: 'https://www.google.com/maps/search/?api=1&query=Kinrin+Lake' }] },
       { time: '11:30–15:30', title: '湯之坪街道・午餐・周邊散步', links: [{ label: 'Google Maps', href: 'https://www.google.com/maps/search/?api=1&query=Yunotsubo+Kaido' }] },
       { time: '16:30 前後', title: '返回界 別府・晚餐與溫泉', links: [{ label: '界 別府 Google Maps', href: 'https://www.google.com/maps/search/?api=1&query=KAI+Beppu' }] },
@@ -93,7 +95,7 @@ const days: Day[] = [
 
 function Links({ links }: { links?: Link[] }) {
   if (!links?.length) return null;
-  return <div className="links">{links.map((link) => <a className="btn" href={link.href} target="_blank" rel="noreferrer" key={link.href}>{link.label} ↗</a>)}</div>;
+  return <div className="links">{links.map((link) => <a className="btn" href={link.href} target="_blank" rel="noreferrer" key={link.href}>{link.label}</a>)}</div>;
 }
 
 export default function Home() {
@@ -118,7 +120,7 @@ export default function Home() {
 
       <section className="stay-section" id="stay">
         <h2>住宿與跨城交通</h2>
-        <div className="stay-grid">{stays.map((stay) => <article className="stay-card" key={stay.name}><div className="stay-title"><strong>{stay.name}</strong><span className="badge">{stay.place}</span></div><p className="dates">{stay.dates}</p><p>{stay.status}</p><div className="links"><a className="btn" href={stay.href} target="_blank" rel="noreferrer">官方網站 ↗</a><a className="btn" href={stay.map} target="_blank" rel="noreferrer">Google Maps ↗</a></div></article>)}</div>
+        <div className="stay-grid">{stays.map((stay) => <article className="stay-card" key={stay.name}><div className="stay-title"><strong>{stay.name}</strong><span className="badge">{stay.place}</span></div><p className="dates">{stay.dates}</p><p>{stay.status}</p><div className="links"><a className="btn" href={stay.href} target="_blank" rel="noreferrer">官方網站</a><a className="btn" href={stay.map} target="_blank" rel="noreferrer">Google Maps</a></div></article>)}</div>
       </section>
 
       <section className="booking-section" id="tickets">
