@@ -1,5 +1,5 @@
 type Link = { label: string; href: string };
-type Item = { time: string; title: string; note?: string; links?: Link[]; flight?: string; reserved?: boolean };
+type Item = { time: string; title: string; note?: string; links?: Link[]; flight?: string; reserved?: boolean; pending?: boolean };
 type Day = { id: string; date: string; nav: string; place: string; title: string; route: string; tags: string[]; sleep?: string; items: Item[] };
 
 const stays = [
@@ -72,7 +72,7 @@ const days: Day[] = [
       { time: '上午', title: '太宰府天滿宮・表參道', links: [{ label: 'Google Maps', href: 'https://www.google.com/maps/search/?api=1&query=Dazaifu+Tenmangu' }, { label: '官方網站', href: 'https://www.dazaifutenmangu.or.jp/' }] },
       { time: '下午', title: '九州國立博物館', note: '2027 展覽與開館日待官方公布。', links: [{ label: 'Google Maps', href: 'https://www.google.com/maps/search/?api=1&query=Kyushu+National+Museum' }, { label: '官方網站', href: 'https://www.kyuhaku.jp/' }] },
       { time: '16:30–18:30', title: '天神逛街', links: [{ label: '天神 Google Maps', href: 'https://www.google.com/maps/search/?api=1&query=Tenjin+Fukuoka' }] },
-      { time: '19:00', title: '藥院燒肉 NIKUICHI 晚餐', note: '尚未訂位；週五熱門時段，記得在訂位開放後預約。晚餐後可從藥院／藥院大通搭七隈線返回博多。', links: [{ label: 'Tabelog', href: 'https://tabelog.com/fukuoka/A4001/A400104/40039111/' }, { label: 'Google Maps', href: 'https://www.google.com/maps/search/?api=1&query=Yakuin+Yakiniku+NIKUICHI+Fukuoka' }, { label: '官方網站', href: 'https://www.yakiniku-nikuichi.com/' }] },
+      { time: '19:00–21:00', title: '藥院燒肉 NIKUICHI 晚餐', pending: true, note: '目前尚未訂位，週五熱門時段記得在訂位開放後預約 19:00。用餐後可從藥院／藥院大通搭七隈線返回博多。', links: [{ label: 'Tabelog 查看／訂位 ↗', href: 'https://tabelog.com/fukuoka/A4001/A400104/40039111/' }, { label: 'Google Maps ↗', href: 'https://www.google.com/maps/search/?api=1&query=Yakuin+Yakiniku+NIKUICHI+Fukuoka' }, { label: '官方網站 ↗', href: 'https://www.yakiniku-nikuichi.com/' }] },
     ],
   },
   {
@@ -137,7 +137,7 @@ export default function Home() {
       {days.map((day) => <section className="day" id={day.id} key={day.id}>
         <h2>{day.date}｜{day.title}</h2><p className="route">{day.route}</p>
         <div className="meta-row">{day.tags.map((tag, i) => <span className={`tag ${i === 0 ? 'city' : ''}`} key={tag}>{tag}</span>)}{day.sleep && <span className="tag sleep">{day.sleep}</span>}</div>
-        <div className="items">{day.items.map((item, index) => <article className={`item ${item.flight ? 'flight-card' : ''}`} key={`${day.id}-${index}`}><div className="topline"><span className={`time ${item.reserved ? 'reserved' : ''}`}>{item.time}</span><span className="what">{item.title}{item.flight && <span className="flight-no">✈ {item.flight}</span>}</span></div>{item.note && <p className="note">{item.note}</p>}<Links links={item.links} /></article>)}</div>
+        <div className="items">{day.items.map((item, index) => <article className={`item ${item.flight ? 'flight-card' : ''} ${item.pending ? 'pending-highlight' : ''}`} key={`${day.id}-${index}`}><div className="topline"><span className={`time ${item.reserved ? 'reserved' : ''}`}>{item.time}</span><span className="what">{item.title}{item.flight && <span className="flight-no">✈ {item.flight}</span>}{item.pending && <span className="pending">尚未訂位</span>}</span></div>{item.note && <p className="note">{item.note}</p>}<Links links={item.links} /></article>)}</div>
       </section>)}
 
       <section className="day" id="notes"><h2>出發前提醒</h2><div className="items">

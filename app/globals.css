@@ -2,20 +2,22 @@
 
 :root {
   color-scheme: light;
-  --ink: #3d3540;
-  --muted: #746a75;
-  --line: #e2d1d5;
-  --paper: #fff8f5;
-  --card: #fffdfb;
-  --mist: #f5e0e6;
-  --sky: #dcecf2;
-  --road: #557b86;
-  --accent: #c85d78;
-  --night: #493b50;
+  --ink: #18324a;
+  --muted: #637483;
+  --line: #d7e1e7;
+  --paper: #fbfaf7;
+  --card: #ffffff;
+  --mist: #f8e7eb;
+  --sky: #e7f0f3;
+  --road: #356f7c;
+  --accent: #d64b3a;
+  --night: #153149;
+  --alert: #d34532;
+  --alert-bg: #fff0eb;
 }
 * { box-sizing: border-box; }
 html { scroll-behavior: smooth; }
-body { margin: 0; font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", "Noto Sans TC", sans-serif; color: var(--ink); background: var(--paper); line-height: 1.55; }
+body { margin: 0; font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", "Noto Sans TC", sans-serif; color: var(--ink); background: linear-gradient(180deg, #fff 0, var(--paper) 300px); line-height: 1.55; }
 a { color: inherit; }
 .hero {
   min-height: 0;
@@ -33,17 +35,17 @@ h1 { margin: 0 0 12px; font-size: clamp(2.35rem, 9vw, 4.8rem); line-height: 1.02
 .summary { display: grid; grid-template-columns: repeat(2, minmax(0,1fr)); gap: 8px; margin-top: 18px; }
 .pill { display: inline-flex; align-items: center; min-height: 40px; padding: 9px 11px; border: 1px solid rgba(255,255,255,.38); border-radius: 8px; background: rgba(255,255,255,.13); backdrop-filter: blur(10px); font-size: .92rem; }
 main { width: min(980px, 100%); margin: 0 auto; padding: 18px 14px 64px; }
-.nav { position: sticky; top: 0; z-index: 5; margin: 0 -14px 18px; display: flex; gap: 8px; padding: 12px 14px 9px; overflow-x: scroll; scrollbar-color: #b79fa6 transparent; scrollbar-width: thin; white-space: nowrap; background: rgba(255,248,245,.94); border-bottom: 1px solid var(--line); backdrop-filter: blur(12px); }
+.nav { position: sticky; top: 0; z-index: 5; margin: 0 -14px 18px; display: flex; gap: 8px; padding: 12px 14px 9px; overflow-x: scroll; scrollbar-color: #9eb1bb transparent; scrollbar-width: thin; white-space: nowrap; background: rgba(251,250,247,.95); border-bottom: 1px solid var(--line); backdrop-filter: blur(12px); }
 .nav::-webkit-scrollbar { height: 8px; }
-.nav::-webkit-scrollbar-thumb { border-radius: 999px; background: #b79fa6; }
+.nav::-webkit-scrollbar-thumb { border-radius: 999px; background: #9eb1bb; }
 .nav a { display: inline-flex; align-items: center; justify-content: center; flex: 0 0 auto; min-height: 46px; padding: 9px 13px; border: 1px solid var(--line); border-radius: 8px; background: var(--card); text-decoration: none; font-weight: 700; font-size: .9rem; }
 .nav a span { margin-left: 5px; color: var(--muted); font-weight: 650; }
-.notice { margin: 0 0 18px; padding: 12px 13px; border-left: 4px solid var(--accent); background: #fbe9ee; }
+.notice { margin: 0 0 18px; padding: 12px 13px; border-left: 4px solid var(--road); background: #eef5f6; }
 .notice strong { color: var(--night); }
 .stay-section { margin: 0 0 20px; padding: 16px 0 18px; border-bottom: 1px solid var(--line); }
 .stay-section h2 { margin: 0 0 10px; font-size: 1.2rem; color: var(--road); }
 .stay-grid { display: grid; grid-template-columns: repeat(2,minmax(0,1fr)); gap: 10px; }
-.stay-card, .item { padding: 12px; border: 1px solid var(--line); border-radius: 8px; background: var(--card); box-shadow: 0 2px 8px rgba(73,59,80,.05); }
+.stay-card, .item { padding: 12px; border: 1px solid var(--line); border-radius: 8px; background: var(--card); box-shadow: 0 2px 8px rgba(21,49,73,.05); }
 .stay-title { display: flex; justify-content: space-between; gap: 10px; margin-bottom: 6px; }
 .stay-card p { margin: 0; color: var(--muted); font-size: .93rem; }
 .stay-card .dates { margin-bottom: 5px; color: var(--ink); font-weight: 750; }
@@ -51,22 +53,25 @@ main { width: min(980px, 100%); margin: 0 auto; padding: 18px 14px 64px; }
 .booking-section { margin: 0 0 20px; padding: 0 0 20px; border-bottom: 1px solid var(--line); }
 .booking-section h2 { margin: 0 0 10px; font-size: 1.2rem; color: var(--road); }
 .booking-grid { display: grid; gap: 10px; }
-.booking-card { padding: 12px; border: 1px solid #e6bdc8; border-radius: 8px; background: #fff5f7; }
+.booking-card { padding: 12px; border: 1px solid #e8d3cc; border-left: 4px solid #e6a08f; border-radius: 8px; background: var(--card); box-shadow: 0 2px 8px rgba(21,49,73,.04); }
 .booking-card strong { color: var(--night); }
 .booking-card p { margin: 5px 0 0; color: var(--muted); font-size: .9rem; }
-.pending { display: inline-flex; margin-left: 7px; padding: 3px 8px; border-radius: 999px; background: #f7dce4; color: #98425b; font-size: .76rem; font-weight: 900; }
+.pending { display: inline-flex; margin-left: 8px; padding: 3px 9px; border-radius: 999px; background: var(--alert-bg); color: #b83828; font-size: .76rem; font-weight: 900; vertical-align: middle; }
 .day { padding: 22px 0; border-top: 1px solid var(--line); scroll-margin-top: 64px; }
 .day h2 { margin: 0 0 6px; color: var(--night); font-size: 1.45rem; }
 .route { margin: 0 0 13px; color: var(--muted); font-weight: 650; }
 .meta-row { display: flex; flex-wrap: wrap; gap: 7px; margin: 0 0 14px; }
-.tag { padding: 4px 8px; border-radius: 999px; background: var(--sky); color: #3f6974; font-size: .78rem; font-weight: 800; }
-.tag.city { background: #f7dce4; color: #98425b; }
-.tag.sleep { background: #ebe2ed; color: var(--night); }
+.tag { padding: 4px 8px; border-radius: 999px; background: #f1f4f5; color: #526875; font-size: .78rem; font-weight: 800; }
+.tag.city { background: var(--sky); color: #2e6572; }
+.tag.sleep { background: #eef0f4; color: var(--night); }
 .items { display: grid; gap: 10px; }
 .topline { display: flex; gap: 10px; align-items: flex-start; }
 .time { flex: 0 0 auto; min-width: 100px; color: var(--road); font-weight: 900; font-size: .92rem; }
 .time.reserved { color: #c43d4f; }
 .what { flex: 1 1 auto; min-width: 0; font-weight: 900; }
+.pending-highlight { padding: 16px; border-color: #efc6bc; border-left: 4px solid var(--alert); box-shadow: 0 5px 16px rgba(21,49,73,.09); }
+.pending-highlight .time { color: var(--alert); font-size: 1rem; }
+.pending-highlight .what { color: var(--night); font-size: 1.03rem; }
 .flight-card .topline { align-items: center; }
 .flight-card .time { min-width: 0; padding: 5px 10px; border-radius: 999px; background: #4e7785; color: white; font-size: 1rem; }
 .flight-no { display: inline-flex; margin-left: 8px; padding: 3px 9px; border: 2px solid #4e7785; border-radius: 8px; color: #4e7785; font-size: .92rem; white-space: nowrap; }
@@ -78,12 +83,13 @@ main { width: min(980px, 100%); margin: 0 auto; padding: 18px 14px 64px; }
 .stop strong { display: block; margin-bottom: 2px; }
 .stop p { margin: 0; color: var(--muted); font-size: .9rem; }
 .links { display: flex; flex-wrap: wrap; gap: 7px; margin-top: 10px; }
-.btn { min-height: 36px; display: inline-flex; align-items: center; padding: 7px 10px; border: 1px solid var(--line); border-radius: 8px; background: #f8eaee; color: var(--night); text-decoration: none; font-weight: 800; font-size: .86rem; }
-.top-button { position: fixed; right: 16px; bottom: 16px; display: grid; place-items:center; width: 42px; height: 42px; border-radius: 50%; background: var(--accent); color: white; text-decoration: none; box-shadow: 0 4px 14px rgba(73,59,80,.24); }
+.btn { min-height: 36px; display: inline-flex; align-items: center; padding: 7px 10px; border: 1px solid #cad9e2; border-radius: 8px; background: #edf3f7; color: var(--night); text-decoration: none; font-weight: 800; font-size: .86rem; }
+.btn:hover { border-color: #99b4c3; background: #e4eef3; }
+.top-button { position: fixed; right: 16px; bottom: 16px; display: grid; place-items:center; width: 42px; height: 42px; border-radius: 50%; background: var(--road); color: white; text-decoration: none; box-shadow: 0 4px 14px rgba(21,49,73,.22); }
 @media (min-width:720px) { .summary { grid-template-columns: repeat(4,minmax(0,1fr)); } }
 @media (max-width:820px) { .stay-grid { grid-template-columns: 1fr; } }
 @media (max-width:650px) {
-  .topline { display: grid; grid-template-columns: 90px 1fr; }
+  .topline { display: grid; grid-template-columns: 104px 1fr; }
   .stop { grid-template-columns: 70px minmax(0,1fr); gap: 8px; }
   .flight-card .topline { display: flex; flex-wrap: wrap; }
   .hero { min-height: 0; aspect-ratio: 3 / 1; padding: 10px 14px; }
