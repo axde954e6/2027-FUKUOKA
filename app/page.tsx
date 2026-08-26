@@ -19,14 +19,15 @@ const days: Day[] = [
     ],
   },
   {
-    id: 'd0321', date: '2027/03/21（日）', nav: '3/21 日', place: '阿蘇', title: '福岡取車・阿蘇火山景點', route: '飯店 → Toyota Rent a Car → 色見熊野座神社 → 草千里 → 阿蘇火山博物館 → 中岳火口 → 阿蘇神社 → 飯店', tags: ['自駕', '阿蘇'], sleep: '龜之井酒店 阿蘇',
+    id: 'd0321', date: '2027/03/21（日）', nav: '3/21 日', place: '阿蘇', title: '福岡取車・阿蘇順向環線', route: '飯店 → Toyota Rent a Car 中洲店 → 草千里／火山博物館 → 中岳火口 → 上色見熊野座神社 → 阿蘇神社 → 龜之井酒店 阿蘇', tags: ['自駕', '順向不折返'], sleep: '龜之井酒店 阿蘇',
     items: [
-      { time: '08:00–09:00', title: '飯店早餐、退房、取車', note: '確認 ETC、保險、還車門市與還車時間。', links: [{ label: '預計租車門市', href: 'https://maps.app.goo.gl/8M3oEenfrbYjNLWb6' }] },
-      { time: '11:30', title: '色見熊野座神社', links: [{ label: 'Google Maps', href: 'https://www.google.com/maps/search/?api=1&query=Kamishikimi+Kumanoimasu+Shrine' }] },
-      { time: '13:15–15:00', title: '草千里・阿蘇火山博物館・午餐', note: '三者位於同一區域，集中安排。', links: [{ label: '草千里 Google Maps', href: 'https://www.google.com/maps/search/?api=1&query=Kusasenri+Aso' }, { label: '火山博物館 Google Maps', href: 'https://www.google.com/maps/search/?api=1&query=Aso+Volcano+Museum' }, { label: '博物館官方網站', href: 'https://www.asomuse.jp/' }] },
-      { time: '15:15', title: '中岳火口', note: '是否開放以當日火山與氣象管制為準。', links: [{ label: '中岳火口 Google Maps', href: 'https://www.google.com/maps/search/?api=1&query=Aso+Nakadake+Crater' }, { label: '火口即時管制', href: 'https://www.aso-volcano.jp/eng/' }] },
-      { time: '16:30', title: '阿蘇神社', note: '前段若延誤可縮短停留，優先準時回飯店吃晚餐。', links: [{ label: 'Google Maps', href: 'https://www.google.com/maps/search/?api=1&query=Aso+Shrine' }] },
-      { time: '17:30 起', title: '龜之井酒店 阿蘇入住・晚餐', links: [{ label: '飯店 Google Maps', href: 'https://www.google.com/maps/search/?api=1&query=Kamenoi+Hotel+Aso' }] },
+      { time: '08:00–09:30', title: '飯店早餐、退房、Toyota 中洲店取車', note: '09:30 前出發；確認 ETC、保險與還車時間。今天不先繞去飯店放行李，避免從阿蘇東側再折返山上；貴重物品請隨身攜帶。', links: [{ label: '租車門市 Google Maps', href: 'https://maps.app.goo.gl/8M3oEenfrbYjNLWb6' }, { label: '整日順向導航', href: 'https://www.google.com/maps/dir/?api=1&origin=Toyota+Rent+a+Car+Nakasu+Fukuoka&destination=Kamenoi+Hotel+Aso&travelmode=driving&waypoints=Kusasenri+Aso%7CAso+Nakadake+Crater%7CKamishikimi+Kumanoimasu+Shrine%7CAso+Shrine' }] },
+      { time: '11:45–13:30', title: '草千里・阿蘇火山博物館・午餐', note: '先抵達阿蘇西側山上，景點與午餐集中在同一區域。博物館目前 17:00 關館。', links: [{ label: '草千里 Google Maps', href: 'https://www.google.com/maps/search/?api=1&query=Kusasenri+Aso' }, { label: '火山博物館 Google Maps', href: 'https://www.google.com/maps/search/?api=1&query=Aso+Volcano+Museum' }, { label: '博物館官方網站', href: 'https://www.asomuse.jp/' }] },
+      { time: '13:40–14:30', title: '中岳火口', note: '由草千里繼續向東，不走回頭路；是否開放以當日火山與氣象管制為準。', links: [{ label: '中岳火口 Google Maps', href: 'https://www.google.com/maps/search/?api=1&query=Aso+Nakadake+Crater' }, { label: '火口即時管制', href: 'https://www.aso-volcano.jp/eng/' }] },
+      { time: '15:20–16:20', title: '上色見熊野座神社', note: '從火口往南阿蘇方向下山，參拜後再沿東側北上。', links: [{ label: 'Google Maps', href: 'https://www.google.com/maps/search/?api=1&query=Kamishikimi+Kumanoimasu+Shrine' }] },
+      { time: '17:10–17:35', title: '阿蘇神社', note: '順路短停；拜殿目前開放至 18:00，但御札所 17:00 結束。若前段延誤，改到 3/22 早餐後再來。', links: [{ label: 'Google Maps', href: 'https://www.google.com/maps/search/?api=1&query=Aso+Shrine' }, { label: '阿蘇神社官方網站', href: 'https://asojinja.or.jp/' }] },
+      { time: '17:45–18:15', title: '龜之井酒店 阿蘇入住', note: '飯店就在阿蘇神社東側，作為今日終點最順。', links: [{ label: '飯店 Google Maps', href: 'https://www.google.com/maps/search/?api=1&query=Kamenoi+Hotel+Aso' }] },
+      { time: '18:30 起', title: '飯店晚餐', note: '官方目前晚餐供應為 17:45–21:00；實際用餐梯次待訂房後確認。', links: [{ label: '飯店餐廳資訊', href: 'https://kamenoi-hotels.com/aso/restaurant/' }] },
     ],
   },
   {
