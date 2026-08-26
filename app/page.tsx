@@ -67,11 +67,12 @@ const days: Day[] = [
     ],
   },
   {
-    id: 'd0326', date: '2027/03/26（五）', nav: '3/26 五', place: '太宰府', title: '太宰府・天神', route: '博多 → 太宰府天滿宮 → 九州國立博物館 → 天神', tags: ['福岡近郊', '建議案'], sleep: 'THE BLOSSOM HAKATA Premier',
+    id: 'd0326', date: '2027/03/26（五）', nav: '3/26 五', place: '太宰府', title: '太宰府・天神・藥院燒肉', route: '博多 → 太宰府天滿宮 → 九州國立博物館 → 天神 → 藥院燒肉 NIKUICHI → 飯店', tags: ['福岡近郊', '晚餐待訂位'], sleep: 'THE BLOSSOM HAKATA Premier',
     items: [
       { time: '上午', title: '太宰府天滿宮・表參道', links: [{ label: 'Google Maps', href: 'https://www.google.com/maps/search/?api=1&query=Dazaifu+Tenmangu' }, { label: '官方網站', href: 'https://www.dazaifutenmangu.or.jp/' }] },
       { time: '下午', title: '九州國立博物館', note: '2027 展覽與開館日待官方公布。', links: [{ label: 'Google Maps', href: 'https://www.google.com/maps/search/?api=1&query=Kyushu+National+Museum' }, { label: '官方網站', href: 'https://www.kyuhaku.jp/' }] },
-      { time: '晚上', title: '天神逛街與晚餐', links: [{ label: '天神 Google Maps', href: 'https://www.google.com/maps/search/?api=1&query=Tenjin+Fukuoka' }] },
+      { time: '16:30–18:30', title: '天神逛街', links: [{ label: '天神 Google Maps', href: 'https://www.google.com/maps/search/?api=1&query=Tenjin+Fukuoka' }] },
+      { time: '19:00', title: '藥院燒肉 NIKUICHI 晚餐', note: '尚未訂位；週五熱門時段，記得在訂位開放後預約。晚餐後可從藥院／藥院大通搭七隈線返回博多。', links: [{ label: 'Tabelog', href: 'https://tabelog.com/fukuoka/A4001/A400104/40039111/' }, { label: 'Google Maps', href: 'https://www.google.com/maps/search/?api=1&query=Yakuin+Yakiniku+NIKUICHI+Fukuoka' }, { label: '官方網站', href: 'https://www.yakiniku-nikuichi.com/' }] },
     ],
   },
   {
@@ -111,7 +112,7 @@ export default function Home() {
 
     <main>
       <nav className="nav" aria-label="行程日期快速跳轉">
-        <a href="#stay">🏨 住宿</a><a href="#tickets">🚗 待預訂</a>
+        <a href="#stay">🏨 住宿</a><a href="#tickets">📝 待預訂</a>
         {days.map((day) => <a href={`#${day.id}`} key={day.id}>{day.nav}<span>{day.place}</span></a>)}
         <a href="#notes">📌 提醒</a>
       </nav>
@@ -129,6 +130,7 @@ export default function Home() {
           <article className="booking-card"><strong>3/20｜三井花園飯店福岡中洲</strong><span className="pending">尚未訂房</span><p>3/20 入住、3/21 退房，共 1 晚。</p><Links links={[{ label: '飯店官方網站', href: stays[0].href }, { label: 'Google Maps', href: stays[0].map }]} /></article>
           <article className="booking-card"><strong>3/21｜龜之井酒店 阿蘇</strong><span className="pending">尚未訂房</span><p>3/21 入住、3/22 退房，共 1 晚；希望含晚餐。</p><Links links={[{ label: '飯店官方網站', href: stays[1].href }, { label: 'Google Maps', href: stays[1].map }]} /></article>
           <article className="booking-card"><strong>3/21 起｜Toyota Rent a Car</strong><span className="pending">尚未訂車</span><p>早餐後取車；暫定 3/24 晚上還車，若門市時間不合就延至 3/25 早上。</p><Links links={[{ label: '預計租車門市', href: 'https://maps.app.goo.gl/8M3oEenfrbYjNLWb6' }]} /></article>
+          <article className="booking-card"><strong>3/26 19:00｜藥院燒肉 NIKUICHI</strong><span className="pending">尚未訂位</span><p>週五熱門時段，記得在訂位開放後優先預約 19:00。</p><Links links={[{ label: 'Tabelog', href: 'https://tabelog.com/fukuoka/A4001/A400104/40039111/' }, { label: 'Google Maps', href: 'https://www.google.com/maps/search/?api=1&query=Yakuin+Yakiniku+NIKUICHI+Fukuoka' }, { label: '官方網站', href: 'https://www.yakiniku-nikuichi.com/' }]} /></article>
         </div>
       </section>
 
