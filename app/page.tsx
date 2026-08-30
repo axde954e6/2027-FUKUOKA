@@ -3,10 +3,10 @@ type Item = { time: string; title: string; note?: string; links?: Link[]; flight
 type Day = { id: string; date: string; nav: string; place: string; title: string; route: string; tags: string[]; sleep?: string; items: Item[] };
 
 const stays = [
-  { name: '三井花園飯店福岡中洲', place: '福岡・中洲', dates: '3/20 入住－3/21 退房｜1 晚', status: '尚未訂房', href: 'https://www.gardenhotels.co.jp/fukuoka-nakasu/tw/', map: 'https://www.google.com/maps/search/?api=1&query=Mitsui+Garden+Hotel+Fukuoka+Nakasu' },
-  { name: '龜之井酒店 阿蘇', place: '阿蘇', dates: '3/21 入住－3/22 退房｜1 晚', status: '尚未訂房', href: 'https://kamenoi-hotels.com/tw/aso/', map: 'https://www.google.com/maps/search/?api=1&query=Kamenoi+Hotel+Aso' },
-  { name: '星野集團 界 別府', place: '別府', dates: '3/22 入住－3/24 退房｜2 晚', status: '已預訂', href: 'https://hoshinoresorts.com/zh_tw/hotels/kaibeppu/', map: 'https://www.google.com/maps/search/?api=1&query=KAI+Beppu' },
-  { name: 'THE BLOSSOM HAKATA Premier', place: '福岡・博多', dates: '3/24 入住－3/28 退房｜4 晚', status: '已預訂', href: 'https://www.jrk-hotels.co.jp/tw/Hakata_premier/', map: 'https://www.google.com/maps/search/?api=1&query=THE+BLOSSOM+HAKATA+Premier' },
+  { name: '三井花園飯店福岡中洲', place: '福岡・中洲', dates: '3/20 入住－3/21 退房｜1 晚', status: '尚未訂房｜Booking.com 比較便宜', href: 'https://www.gardenhotels.co.jp/fukuoka-nakasu/tw/', map: 'https://www.google.com/maps/search/?api=1&query=Mitsui+Garden+Hotel+Fukuoka+Nakasu' },
+  { name: '龜之井酒店 阿蘇', place: '阿蘇', dates: '3/21 入住－3/22 退房｜1 晚', status: '尚未訂房｜Booking.com 比較便宜', href: 'https://kamenoi-hotels.com/tw/aso/', map: 'https://www.google.com/maps/search/?api=1&query=Kamenoi+Hotel+Aso' },
+  { name: '星野集團 界 別府', place: '別府', dates: '3/22 入住－3/24 退房｜2 晚', status: '已預訂｜官網訂房', href: 'https://hoshinoresorts.com/zh_tw/hotels/kaibeppu/', map: 'https://www.google.com/maps/search/?api=1&query=KAI+Beppu' },
+  { name: 'THE BLOSSOM HAKATA Premier', place: '福岡・博多', dates: '3/24 入住－3/28 退房｜4 晚', status: '已預訂｜官網訂房', href: 'https://www.jrk-hotels.co.jp/tw/Hakata_premier/', map: 'https://www.google.com/maps/search/?api=1&query=THE+BLOSSOM+HAKATA+Premier' },
 ];
 
 const days: Day[] = [
@@ -44,7 +44,7 @@ const days: Day[] = [
     items: [
       { time: '08:00', title: '飯店早餐', note: '固定用餐時間。', reserved: true },
       { time: '09:00–10:00', title: '前往由布院', links: [{ label: '由布院 Google Maps', href: 'https://www.google.com/maps/search/?api=1&query=Yufuin+Oita' }] },
-      { time: '10:15–11:30', title: '金鱗湖散步', links: [{ label: 'Google Maps', href: 'https://www.google.com/maps/search/?api=1&query=Kinrin+Lake' }] },
+      { time: '10:15–11:30', title: '金鱗湖散步', note: '晨霧提示：日出前後 30 分鐘至 1 小時霧氣最濃，適合觀賞晨霧湖面。若維持目前 10:15 抵達，則以一般湖景為主；想看晨霧需另排清晨出發。', links: [{ label: 'Google Maps', href: 'https://www.google.com/maps/search/?api=1&query=Kinrin+Lake' }] },
       { time: '11:30–15:30', title: '湯之坪街道・午餐・周邊散步', links: [{ label: 'Google Maps', href: 'https://www.google.com/maps/search/?api=1&query=Yunotsubo+Kaido' }] },
       { time: '16:30 前後', title: '返回界 別府・晚餐與溫泉', links: [{ label: '界 別府 Google Maps', href: 'https://www.google.com/maps/search/?api=1&query=KAI+Beppu' }] },
     ],
@@ -73,7 +73,7 @@ const days: Day[] = [
       { time: '上午', title: '太宰府天滿宮・表參道', links: [{ label: 'Google Maps', href: 'https://www.google.com/maps/search/?api=1&query=Dazaifu+Tenmangu' }, { label: '官方網站', href: 'https://www.dazaifutenmangu.or.jp/' }] },
       { time: '下午', title: '九州國立博物館', note: '2027 展覽與開館日待官方公布。', links: [{ label: 'Google Maps', href: 'https://www.google.com/maps/search/?api=1&query=Kyushu+National+Museum' }, { label: '官方網站', href: 'https://www.kyuhaku.jp/' }] },
       { time: '16:30–18:30', title: '天神逛街', links: [{ label: '天神 Google Maps', href: 'https://www.google.com/maps/search/?api=1&query=Tenjin+Fukuoka' }] },
-      { time: '19:00–21:00', title: '藥院燒肉 NIKUICHI 晚餐', pending: true, note: '目前尚未訂位，週五熱門時段記得在訂位開放後預約 19:00。用餐後可從藥院／藥院大通搭七隈線返回博多。', links: [{ label: 'Tabelog 查看／訂位 ↗', href: 'https://tabelog.com/fukuoka/A4001/A400104/40039111/' }, { label: 'Google Maps ↗', href: 'https://www.google.com/maps/search/?api=1&query=Yakuin+Yakiniku+NIKUICHI+Fukuoka' }, { label: '官方網站 ↗', href: 'https://www.yakiniku-nikuichi.com/' }] },
+      { time: '19:00–21:00', title: '藥院燒肉 NIKUICHI 晚餐', pending: true, note: '目前尚未訂位，週五熱門時段記得在訂位開放後預約 19:00；建議加購粗烤網。用餐後可從藥院／藥院大通搭七隈線返回博多。', links: [{ label: 'Tabelog 查看／訂位', href: 'https://tabelog.com/fukuoka/A4001/A400104/40039111/' }, { label: 'Google Maps', href: 'https://www.google.com/maps/search/?api=1&query=Yakuin+Yakiniku+NIKUICHI+Fukuoka' }, { label: '官方網站', href: 'https://www.yakiniku-nikuichi.com/' }] },
     ],
   },
   {
@@ -128,10 +128,10 @@ export default function Home() {
       <section className="booking-section" id="tickets">
         <h2>待預訂</h2>
         <div className="booking-grid">
-          <article className="booking-card"><strong>3/20｜三井花園飯店福岡中洲</strong><span className="pending">尚未訂房</span><p>3/20 入住、3/21 退房，共 1 晚。</p><Links links={[{ label: '飯店官方網站', href: stays[0].href }, { label: 'Google Maps', href: stays[0].map }]} /></article>
-          <article className="booking-card"><strong>3/21｜龜之井酒店 阿蘇</strong><span className="pending">尚未訂房</span><p>3/21 入住、3/22 退房，共 1 晚；希望含晚餐。</p><Links links={[{ label: '飯店官方網站', href: stays[1].href }, { label: 'Google Maps', href: stays[1].map }]} /></article>
+          <article className="booking-card"><strong>3/20｜三井花園飯店福岡中洲</strong><span className="pending">尚未訂房</span><p>3/20 入住、3/21 退房，共 1 晚；Booking.com 比較便宜。</p><Links links={[{ label: '飯店官方網站', href: stays[0].href }, { label: 'Google Maps', href: stays[0].map }]} /></article>
+          <article className="booking-card"><strong>3/21｜龜之井酒店 阿蘇</strong><span className="pending">尚未訂房</span><p>3/21 入住、3/22 退房，共 1 晚；希望含晚餐，Booking.com 比較便宜。</p><Links links={[{ label: '飯店官方網站', href: stays[1].href }, { label: 'Google Maps', href: stays[1].map }]} /></article>
           <article className="booking-card"><strong>3/21 起｜Toyota Rent a Car</strong><span className="pending">尚未訂車</span><p>早餐後取車；暫定 3/24 晚上還車，若門市時間不合就延至 3/25 早上。</p><Links links={[{ label: '預計租車門市', href: 'https://maps.app.goo.gl/8M3oEenfrbYjNLWb6' }]} /></article>
-          <article className="booking-card"><strong>3/26 19:00｜藥院燒肉 NIKUICHI</strong><span className="pending">尚未訂位</span><p>週五熱門時段，記得在訂位開放後優先預約 19:00。</p><Links links={[{ label: 'Tabelog', href: 'https://tabelog.com/fukuoka/A4001/A400104/40039111/' }, { label: 'Google Maps', href: 'https://www.google.com/maps/search/?api=1&query=Yakuin+Yakiniku+NIKUICHI+Fukuoka' }, { label: '官方網站', href: 'https://www.yakiniku-nikuichi.com/' }]} /></article>
+          <article className="booking-card"><strong>3/26 19:00｜藥院燒肉 NIKUICHI</strong><span className="pending">尚未訂位</span><p>週五熱門時段，記得在訂位開放後優先預約 19:00；建議加購粗烤網。</p><Links links={[{ label: 'Tabelog', href: 'https://tabelog.com/fukuoka/A4001/A400104/40039111/' }, { label: 'Google Maps', href: 'https://www.google.com/maps/search/?api=1&query=Yakuin+Yakiniku+NIKUICHI+Fukuoka' }, { label: '官方網站', href: 'https://www.yakiniku-nikuichi.com/' }]} /></article>
         </div>
       </section>
 
