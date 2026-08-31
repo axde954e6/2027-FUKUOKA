@@ -49,6 +49,13 @@ main { width: min(980px, 100%); margin: 0 auto; padding: 18px 14px 64px; }
 .stay-title { display: flex; justify-content: space-between; gap: 10px; margin-bottom: 6px; }
 .stay-card p { margin: 0; color: var(--muted); font-size: .93rem; }
 .stay-card .dates { margin-bottom: 5px; color: var(--ink); font-weight: 750; }
+.price-summary { margin: -3px 0 14px; color: var(--muted); font-size: .94rem; }
+.price-summary span { display: inline-block; margin-right: 8px; padding: 3px 8px; border-radius: 999px; background: var(--blush); color: var(--ink); font-size: .76rem; font-weight: 900; }
+.price-summary strong { color: var(--ink); }
+.stay-card .stay-price { margin: 9px 0 7px; padding: 8px 10px; border-left: 3px solid var(--sakura); background: var(--blush); color: var(--ink); }
+.stay-price span { display: block; color: var(--muted); font-size: .73rem; font-weight: 900; letter-spacing: .04em; }
+.stay-price strong { display: block; margin: 1px 0; font-size: 1.06rem; }
+.stay-price small { display: block; color: var(--muted); font-size: .78rem; line-height: 1.45; }
 .badge { flex: 0 0 auto; padding: 3px 8px; border-radius: 999px; background: var(--mist); color: var(--road); font-size: .76rem; font-weight: 900; }
 .booking-section { margin: 0 0 20px; padding: 0 0 20px; border-bottom: 1px solid var(--line); }
 .booking-section h2 { margin: 0 0 10px; font-size: 1.2rem; color: var(--road); }

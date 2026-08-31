@@ -3,10 +3,10 @@ type Item = { time: string; title: string; note?: string; links?: Link[]; flight
 type Day = { id: string; date: string; nav: string; place: string; title: string; route: string; tags: string[]; sleep?: string; items: Item[] };
 
 const stays = [
-  { name: '三井花園飯店福岡中洲', place: '福岡・中洲', dates: '3/20 入住－3/21 退房｜1 晚', status: '尚未訂房｜Booking.com 比較便宜', href: 'https://www.gardenhotels.co.jp/fukuoka-nakasu/tw/', map: 'https://www.google.com/maps/search/?api=1&query=Mitsui+Garden+Hotel+Fukuoka+Nakasu' },
-  { name: '龜之井酒店 阿蘇', place: '阿蘇', dates: '3/21 入住－3/22 退房｜1 晚', status: '尚未訂房｜Booking.com 比較便宜', href: 'https://kamenoi-hotels.com/tw/aso/', map: 'https://www.google.com/maps/search/?api=1&query=Kamenoi+Hotel+Aso' },
-  { name: '星野集團 界 別府', place: '別府', dates: '3/22 入住－3/24 退房｜2 晚', status: '已預訂｜官網訂房', href: 'https://hoshinoresorts.com/zh_tw/hotels/kaibeppu/', map: 'https://www.google.com/maps/search/?api=1&query=KAI+Beppu' },
-  { name: 'THE BLOSSOM HAKATA Premier', place: '福岡・博多', dates: '3/24 入住－3/28 退房｜4 晚', status: '已預訂｜官網訂房', href: 'https://www.jrk-hotels.co.jp/tw/Hakata_premier/', map: 'https://www.google.com/maps/search/?api=1&query=THE+BLOSSOM+HAKATA+Premier' },
+  { name: '三井花園飯店福岡中洲', place: '福岡・中洲', dates: '3/20 入住－3/21 退房｜1 晚', priceLabel: '預估房價', price: '¥42,402', priceNote: '包含早餐', status: '尚未訂房｜Booking.com 比較便宜', href: 'https://www.gardenhotels.co.jp/fukuoka-nakasu/tw/', map: 'https://www.google.com/maps/search/?api=1&query=Mitsui+Garden+Hotel+Fukuoka+Nakasu' },
+  { name: '龜之井酒店 阿蘇', place: '阿蘇', dates: '3/21 入住－3/22 退房｜1 晚', priceLabel: '預估房價', price: '¥55,000～64,240', priceNote: '含早、晚餐；目前尚未開放 2027 年 3 月訂房，價格仍不確定', status: '尚未訂房｜Booking.com 比較便宜', href: 'https://kamenoi-hotels.com/tw/aso/', map: 'https://www.google.com/maps/search/?api=1&query=Kamenoi+Hotel+Aso' },
+  { name: '星野集團 界 別府', place: '別府', dates: '3/22 入住－3/24 退房｜2 晚', priceLabel: '已確認房價', price: '¥107,040', priceNote: '住宿總額', status: '已預訂｜官網訂房', href: 'https://hoshinoresorts.com/zh_tw/hotels/kaibeppu/', map: 'https://www.google.com/maps/search/?api=1&query=KAI+Beppu' },
+  { name: 'THE BLOSSOM HAKATA Premier', place: '福岡・博多', dates: '3/24 入住－3/28 退房｜4 晚', priceLabel: '已確認房價', price: '¥128,022', priceNote: '住宿總額', status: '已預訂｜官網訂房', href: 'https://www.jrk-hotels.co.jp/tw/Hakata_premier/', map: 'https://www.google.com/maps/search/?api=1&query=THE+BLOSSOM+HAKATA+Premier' },
 ];
 
 const days: Day[] = [
@@ -122,7 +122,8 @@ export default function Home() {
 
       <section className="stay-section" id="stay">
         <h2>住宿與跨城交通</h2>
-        <div className="stay-grid">{stays.map((stay) => <article className="stay-card" key={stay.name}><div className="stay-title"><strong>{stay.name}</strong><span className="badge">{stay.place}</span></div><p className="dates">{stay.dates}</p><p>{stay.status}</p><div className="links"><a className="btn" href={stay.href} target="_blank" rel="noreferrer">官方網站</a><a className="btn" href={stay.map} target="_blank" rel="noreferrer">Google Maps</a></div></article>)}</div>
+        <p className="price-summary"><span>房價概算</span>4 間飯店・8 晚合計預估 <strong>¥332,464～341,704</strong></p>
+        <div className="stay-grid">{stays.map((stay) => <article className="stay-card" key={stay.name}><div className="stay-title"><strong>{stay.name}</strong><span className="badge">{stay.place}</span></div><p className="dates">{stay.dates}</p><div className="stay-price"><span>{stay.priceLabel}</span><strong>{stay.price}</strong><small>{stay.priceNote}</small></div><p>{stay.status}</p><div className="links"><a className="btn" href={stay.href} target="_blank" rel="noreferrer">官方網站</a><a className="btn" href={stay.map} target="_blank" rel="noreferrer">Google Maps</a></div></article>)}</div>
       </section>
 
       <section className="booking-section" id="tickets">
