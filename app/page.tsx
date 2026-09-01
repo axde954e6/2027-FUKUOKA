@@ -19,23 +19,29 @@ const days: Day[] = [
     ],
   },
   {
-    id: 'd0321', date: '2027/03/21（日）', nav: '3/21 日', place: '阿蘇', title: '福岡取車・阿蘇景點・入住門司港', route: '飯店 → Toyota Rent a Car 中洲店 → 草千里／火山博物館 → 中岳火口 → 上色見熊野座神社 → 阿蘇神社 → BEB5 門司港', tags: ['自駕', '長距離移動'], sleep: 'BEB5 門司港',
+    id: 'd0321', date: '2027/03/21（日）', nav: '3/21 日', place: '門司港', title: '福津・小倉・門司港', route: '飯店 → Toyota Rent a Car 中洲店 → かがみの海（福間海岸）→ 宮地嶽神社（時間允許）→ 小倉城 → BEB5門司港 → 門司港懷舊 → 燒咖哩 → 皿倉山夜景（天氣良好時）', tags: ['自駕', '福津・北九州'], sleep: 'BEB5門司港 by 星野集團',
     items: [
-      { time: '08:00–09:30', title: '飯店早餐、退房、Toyota 中洲店取車', note: '09:30 前出發；確認 ETC、保險與還車時間。行李放車上，貴重物品請隨身攜帶。', links: [{ label: '租車門市 Google Maps', href: 'https://maps.app.goo.gl/8M3oEenfrbYjNLWb6' }, { label: '整日順向導航', href: 'https://www.google.com/maps/dir/?api=1&origin=Toyota+Rent+a+Car+Nakasu+Fukuoka&destination=BEB5+Mojiko+by+Hoshino+Resorts&travelmode=driving&waypoints=Kusasenri+Aso%7CAso+Nakadake+Crater%7CKamishikimi+Kumanoimasu+Shrine%7CAso+Shrine' }] },
-      { time: '11:45–13:15', title: '草千里・阿蘇火山博物館・午餐', note: '景點與午餐集中在同一區域；因晚上需前往門司港，停留時間稍微縮短。', links: [{ label: '草千里 Google Maps', href: 'https://www.google.com/maps/search/?api=1&query=Kusasenri+Aso' }, { label: '火山博物館 Google Maps', href: 'https://www.google.com/maps/search/?api=1&query=Aso+Volcano+Museum' }, { label: '博物館官方網站', href: 'https://www.asomuse.jp/' }] },
-      { time: '13:25–14:10', title: '中岳火口', note: '是否開放以當日火山與氣象管制為準。', links: [{ label: '中岳火口 Google Maps', href: 'https://www.google.com/maps/search/?api=1&query=Aso+Nakadake+Crater' }, { label: '火口即時管制', href: 'https://www.aso-volcano.jp/eng/' }] },
-      { time: '15:00–16:00', title: '上色見熊野座神社', note: '參拜後沿阿蘇東側北上，不需折返山頂。', links: [{ label: 'Google Maps', href: 'https://www.google.com/maps/search/?api=1&query=Kamishikimi+Kumanoimasu+Shrine' }] },
-      { time: '16:45–17:10', title: '阿蘇神社', note: '順路短停；若前段延誤則略過，優先避免太晚抵達門司港。', links: [{ label: 'Google Maps', href: 'https://www.google.com/maps/search/?api=1&query=Aso+Shrine' }, { label: '阿蘇神社官方網站', href: 'https://asojinja.or.jp/' }] },
-      { time: '17:10–20:00', title: '開車前往門司港・途中晚餐', note: '這段是當日最長車程，建議途中休息並簡單用餐。', links: [{ label: '前往飯店 Google Maps', href: 'https://www.google.com/maps/dir/?api=1&origin=Aso+Shrine&destination=BEB5+Mojiko+by+Hoshino+Resorts&travelmode=driving' }] },
-      { time: '20:00 前後', title: 'BEB5 門司港入住', links: [{ label: '飯店 Google Maps', href: 'https://www.google.com/maps/search/?api=1&query=BEB5+Mojiko+by+Hoshino+Resorts' }] },
+      { time: '早餐', title: '飯店早餐、退房', note: '取車前先在飯店吃早餐，退房後再前往租車門市。' },
+      { time: '09:00', title: 'Toyota Rent a Car 中洲店取車', note: '早餐、退房完成後前往門市，取車後正式開始當天自駕行程。', links: [{ label: '租車門市 Google Maps', href: 'https://maps.app.goo.gl/8M3oEenfrbYjNLWb6' }] },
+      { time: '上午', title: 'かがみの海／福間海岸', note: '鏡海的倒影效果受潮汐、風勢與天氣影響很大，實際出發時間建議依 2027/03/21 當日乾潮時間再微調；若條件不佳則以一般海岸散步為主。', links: [{ label: 'Google Maps', href: 'https://www.google.com/maps/search/?api=1&query=Kagami+no+Umi+Fukuma+Beach' }] },
+      { time: '上午～中午', title: '宮地嶽神社（可選景點）', note: '與鏡海距離近，若當天鏡海停留較久、潮汐時間不利或後續行程較晚，可直接跳過。可參拜神社，並從參道方向眺望玄界灘與光之道景觀方向。', links: [{ label: 'Google Maps', href: 'https://www.google.com/maps/search/?api=1&query=Miyajidake+Shrine' }] },
+      { time: '中午', title: '前往小倉・午餐', note: '抵達小倉後先安排午餐，再前往小倉城周邊。' },
+      { time: '下午', title: '小倉城・勝山公園', note: '以小倉城為主要景點，視當天停留時間決定是否進入小倉城庭園；3 月下旬若當年櫻花較早，也可順便欣賞勝山公園周邊花況。', links: [{ label: '小倉城 Google Maps', href: 'https://www.google.com/maps/search/?api=1&query=Kokura+Castle' }] },
+      { time: '下午', title: '前往門司港・BEB5 Check-in', note: '下午前往門司港，抵達後先辦理 BEB5門司港 Check-in。原則上將車停好，再以步行方式遊覽門司港。', links: [{ label: '飯店 Google Maps', href: 'https://www.google.com/maps/search/?api=1&query=BEB5+Mojiko+by+Hoshino+Resorts' }] },
+      { time: '下午～傍晚', title: '門司港懷舊散步', note: '建議順序：門司港站 → 舊門司三井俱樂部 → 海峽廣場 → Blue Wing Moji → 門司港懷舊街區。Check-in 後以步行為主，不需要在門司港懷舊區內頻繁移動車輛。', links: [{ label: 'Google Maps', href: 'https://www.google.com/maps/search/?api=1&query=Mojiko+Retro' }] },
+      { time: '傍晚～晚上', title: '門司港燒咖哩', note: '門司港散步途中或結束後安排燒咖哩，實際餐廳之後再決定。' },
+      { time: '晚上', title: '皿倉山纜車・夜景（天氣良好時）', note: '視當天天氣、能見度與纜車營運狀況決定是否前往。若下雨、濃霧或能見度不佳，直接取消並留在門司港／BEB5休息。2027 年正式營業時間公布後再確認末班時間。', links: [{ label: 'Google Maps', href: 'https://www.google.com/maps/search/?api=1&query=Sarakurayama+Cable+Car' }] },
+      { time: '晚上', title: '返回 BEB5門司港', note: '返回飯店後休息，可使用飯店設施；不再安排其他跨區景點。若皿倉山取消，則直接在門司港與飯店休息。', links: [{ label: '飯店 Google Maps', href: 'https://www.google.com/maps/search/?api=1&query=BEB5+Mojiko+by+Hoshino+Resorts' }] },
     ],
   },
   {
-    id: 'd0322', date: '2027/03/22（一）', nav: '3/22 一', place: '別府', title: '門司港前往別府', route: 'BEB5 門司港 → 門司港周邊 → 九州自然動物公園／鶴見岳（二選一）→ 界 別府', tags: ['移動日', '景點二選一'], sleep: '界 別府',
+    id: 'd0322', date: '2027/03/22（一）', nav: '3/22 一', place: '別府', title: '門司港 → 關門海峽 → 別府', route: 'BEB5門司港 → 和布刈公園／關門海峽 → 九州自然動物公園 → 界 別府', tags: ['自駕', '移動日'], sleep: '別府住宿',
     items: [
-      { time: '08:00–09:30', title: '門司港早餐、飯店退房', note: '可在門司港周邊短暫散步後出發。', links: [{ label: '飯店 Google Maps', href: 'https://www.google.com/maps/search/?api=1&query=BEB5+Mojiko+by+Hoshino+Resorts' }, { label: '門司港 Google Maps', href: 'https://www.google.com/maps/search/?api=1&query=Mojiko+Retro' }] },
-      { time: '上午–下午', title: '九州自然動物公園或鶴見岳（二選一）', note: '較推薦九州自然動物公園；若天氣非常好且想看山景，再改鶴見岳。', links: [{ label: '動物園 Google Maps', href: 'https://www.google.com/maps/search/?api=1&query=African+Safari+Oita' }, { label: '動物園官方網站', href: 'https://www.africansafari.co.jp/' }, { label: '鶴見岳 Google Maps', href: 'https://www.google.com/maps/search/?api=1&query=Beppu+Ropeway' }] },
-      { time: '15:30 前後', title: '界 別府入住', note: '保留旅館活動與溫泉時間。', links: [{ label: '界 別府 Google Maps', href: 'https://www.google.com/maps/search/?api=1&query=KAI+Beppu' }, { label: '界 別府官方網站', href: 'https://hoshinoresorts.com/zh_tw/hotels/kaibeppu/' }] },
+      { time: '早餐', title: 'BEB5門司港早餐、退房', note: '早上先在飯店吃早餐，保留一些享受飯店與門司港景色的時間，早餐後再退房。', links: [{ label: '飯店 Google Maps', href: 'https://www.google.com/maps/search/?api=1&query=BEB5+Mojiko+by+Hoshino+Resorts' }] },
+      { time: '上午', title: '和布刈公園・關門海峽', note: '作為離開門司港前的短停景點，不安排長時間健行；欣賞關門海峽、關門橋與對岸下關景色後，直接往別府方向南下。', links: [{ label: 'Google Maps', href: 'https://www.google.com/maps/search/?api=1&query=Mekari+Park' }] },
+      { time: '上午～中午', title: '前往九州自然動物公園', note: '從門司港一路往大分方向南下，這段以移動為主。' },
+      { time: '中午～下午', title: '九州自然動物公園 African Safari', note: '今日 17:30 有界別府固定晚餐，因此下午行程以準時抵達飯店為最高優先；若前段交通延誤，縮短動物公園停留時間。', links: [{ label: '動物園 Google Maps', href: 'https://www.google.com/maps/search/?api=1&query=African+Safari+Oita' }, { label: '動物園官方網站', href: 'https://www.africansafari.co.jp/' }] },
+      { time: '下午', title: '前往界 別府・Check-in', note: '下午返回界別府，盡量提早 Check-in，保留旅館活動與溫泉時間；不再加入其他下午景點。', links: [{ label: '界 別府 Google Maps', href: 'https://www.google.com/maps/search/?api=1&query=KAI+Beppu' }, { label: '界 別府官方網站', href: 'https://hoshinoresorts.com/zh_tw/hotels/kaibeppu/' }] },
       { time: '17:30', title: '飯店晚餐', note: '固定用餐時間，行程請預留準時返回飯店。', reserved: true },
     ],
   },
@@ -145,6 +151,20 @@ export default function Home() {
         <article className="item"><strong>租車</strong><p className="note">確認 ETC 卡、保險、駕照日文譯本、還車門市，以及三月底山區的輪胎需求。</p></article>
         <article className="item"><strong>旅館晚餐</strong><p className="note">界 別府 3/22 的晚餐時間為 17:30，當日行程需準時返回飯店。</p></article>
       </div></section>
+
+      <section className="notice" id="future-aso">
+        <strong>🗂 未來備用行程｜阿蘇</strong>
+        <p>原 2027 九州行程規劃，因本次取消阿蘇住宿而移出正式行程。保留作為未來熊本／阿蘇自駕旅行參考。</p>
+        <p><strong>建議順序：</strong>草千里 → 阿蘇火山博物館 → 中岳火口 → 上色見熊野座神社 → 阿蘇神社</p>
+        <dl>
+          <dt><strong>草千里</strong></dt><dd>阿蘇代表性的草原景觀，可以與阿蘇火山博物館、午餐安排在同一區域。</dd>
+          <dt><strong>阿蘇火山博物館</strong></dt><dd>位於草千里附近，若未來安排阿蘇自駕，可以與草千里一起遊覽。</dd>
+          <dt><strong>中岳火口</strong></dt><dd>草千里之後可以繼續前往；是否開放以當日火山活動、火山氣體濃度與氣象管制為準。</dd>
+          <dt><strong>上色見熊野座神社</strong></dt><dd>位於高森方向，特色為杉木參道、石燈籠與森林景觀。若未來規劃阿蘇＋高森一帶，可以一起安排。</dd>
+          <dt><strong>阿蘇神社</strong></dt><dd>適合作為阿蘇北側行程最後一站，可以搭配門前町散步。</dd>
+        </dl>
+        <p><strong>備註：</strong>以上為原阿蘇自駕規劃留下的景點清單。未來若安排熊本／阿蘇旅行，可再依住宿位置、火山管制與當時營業時間重新調整順序。</p>
+      </section>
     </main>
     <a className="top-button" href="#" aria-label="回到頁面頂端">↑</a>
   </>;
