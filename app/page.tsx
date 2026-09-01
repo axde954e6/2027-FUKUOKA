@@ -4,8 +4,8 @@ type Day = { id: string; date: string; nav: string; place: string; title: string
 
 const stays = [
   { name: '三井花園飯店福岡中洲', place: '福岡・中洲', dates: '3/20－3/21｜1 晚', price: '¥42,402', priceNote: '含早餐', bookingLabel: 'Booking.com', href: 'https://www.gardenhotels.co.jp/fukuoka-nakasu/tw/', map: 'https://www.google.com/maps/search/?api=1&query=Mitsui+Garden+Hotel+Fukuoka+Nakasu' },
-  { name: 'BEB5 門司港 by 星野集團', place: '門司港', dates: '3/21－3/22｜1 晚', price: '¥24,140', bookingLabel: '訂房資訊', bookingHref: 'https://hoshinoresorts.com/CH/account/service', href: 'https://hoshinoresorts.com/zh_tw/hotels/beb5mojiko/', map: 'https://www.google.com/maps/search/?api=1&query=BEB5+Mojiko+by+Hoshino+Resorts' },
-  { name: '星野集團 界 別府', place: '別府', dates: '3/22－3/24｜2 晚', price: '¥107,040', bookingLabel: '訂房資訊', bookingHref: 'https://hoshinoresorts.com/CH/account/service', href: 'https://hoshinoresorts.com/zh_tw/hotels/kaibeppu/', map: 'https://www.google.com/maps/search/?api=1&query=KAI+Beppu' },
+  { name: 'BEB5 門司港 by 星野集團', place: '門司港', dates: '3/21－3/22｜1 晚', price: '¥24,140', bookingLabel: '訂房資訊', bookingHref: 'https://hoshinoresorts.com/reservations/#/CH/hotels/0000000206', href: 'https://hoshinoresorts.com/zh_tw/hotels/beb5mojiko/', map: 'https://www.google.com/maps/search/?api=1&query=BEB5+Mojiko+by+Hoshino+Resorts' },
+  { name: '星野集團 界 別府', place: '別府', dates: '3/22－3/24｜2 晚', price: '¥107,040', bookingLabel: '訂房資訊', bookingHref: 'https://hoshinoresorts.com/reservations/#/CH/hotels/0000000206', href: 'https://hoshinoresorts.com/zh_tw/hotels/kaibeppu/', map: 'https://www.google.com/maps/search/?api=1&query=KAI+Beppu' },
   { name: 'THE BLOSSOM HAKATA Premier', place: '福岡・博多', dates: '3/24－3/28｜4 晚', price: '¥128,022', bookingLabel: 'JR Hotel Members App', payment: '現場付款', href: 'https://www.jrk-hotels.co.jp/tw/Hakata_premier/', map: 'https://www.google.com/maps/search/?api=1&query=THE+BLOSSOM+HAKATA+Premier' },
 ];
 
@@ -147,7 +147,6 @@ export default function Home() {
       </section>)}
 
       <section className="day" id="notes"><h2>出發前提醒</h2><div className="items">
-        <article className="item"><strong>阿蘇火口</strong><p className="note">出發當天查看官方管制；若關閉，改增加草千里、博物館或阿蘇神社停留時間。</p><Links links={[{ label: '火口即時管制', href: 'https://www.aso-volcano.jp/eng/' }]} /></article>
         <article className="item"><strong>租車</strong><p className="note">確認 ETC 卡、保險、駕照日文譯本、還車門市，以及三月底山區的輪胎需求。</p></article>
         <article className="item"><strong>旅館晚餐</strong><p className="note">界 別府 3/22 的晚餐時間為 17:30，當日行程需準時返回飯店。</p></article>
       </div></section>
