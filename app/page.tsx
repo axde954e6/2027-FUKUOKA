@@ -3,10 +3,10 @@ type Item = { time: string; title: string; note?: string; links?: Link[]; flight
 type Day = { id: string; date: string; nav: string; place: string; title: string; route: string; tags: string[]; sleep?: string; items: Item[] };
 
 const stays = [
-  { name: '三井花園飯店福岡中洲', place: '福岡・中洲', dates: '3/20 入住－3/21 退房｜1 晚', priceLabel: '預估房價', price: '¥42,402', priceNote: '包含早餐', status: '尚未訂房｜Booking.com 比較便宜', href: 'https://www.gardenhotels.co.jp/fukuoka-nakasu/tw/', map: 'https://www.google.com/maps/search/?api=1&query=Mitsui+Garden+Hotel+Fukuoka+Nakasu' },
-  { name: '龜之井酒店 阿蘇', place: '阿蘇', dates: '3/21 入住－3/22 退房｜1 晚', priceLabel: '預估房價', price: '¥55,000～64,240', priceNote: '含早、晚餐；目前尚未開放 2027 年 3 月訂房，價格仍不確定', status: '尚未訂房｜Booking.com 比較便宜', href: 'https://kamenoi-hotels.com/tw/aso/', map: 'https://www.google.com/maps/search/?api=1&query=Kamenoi+Hotel+Aso' },
-  { name: '星野集團 界 別府', place: '別府', dates: '3/22 入住－3/24 退房｜2 晚', priceLabel: '已確認房價', price: '¥107,040', priceNote: '住宿總額', status: '已預訂｜官網訂房', href: 'https://hoshinoresorts.com/zh_tw/hotels/kaibeppu/', map: 'https://www.google.com/maps/search/?api=1&query=KAI+Beppu' },
-  { name: 'THE BLOSSOM HAKATA Premier', place: '福岡・博多', dates: '3/24 入住－3/28 退房｜4 晚', priceLabel: '已確認房價', price: '¥128,022', priceNote: '住宿總額', status: '已預訂｜官網訂房', href: 'https://www.jrk-hotels.co.jp/tw/Hakata_premier/', map: 'https://www.google.com/maps/search/?api=1&query=THE+BLOSSOM+HAKATA+Premier' },
+  { name: '三井花園飯店福岡中洲', place: '福岡・中洲', dates: '3/20－3/21｜1 晚', price: '¥42,402', priceNote: '含早餐', bookingLabel: 'Booking.com', href: 'https://www.gardenhotels.co.jp/fukuoka-nakasu/tw/', map: 'https://www.google.com/maps/search/?api=1&query=Mitsui+Garden+Hotel+Fukuoka+Nakasu' },
+  { name: 'BEB5 門司港 by 星野集團', place: '門司港', dates: '3/21－3/22｜1 晚', price: '¥24,140', bookingLabel: '訂房資訊', bookingHref: 'https://hoshinoresorts.com/CH/account/service', href: 'https://hoshinoresorts.com/zh_tw/hotels/beb5mojiko/', map: 'https://www.google.com/maps/search/?api=1&query=BEB5+Mojiko+by+Hoshino+Resorts' },
+  { name: '星野集團 界 別府', place: '別府', dates: '3/22－3/24｜2 晚', price: '¥107,040', bookingLabel: '訂房資訊', bookingHref: 'https://hoshinoresorts.com/CH/account/service', href: 'https://hoshinoresorts.com/zh_tw/hotels/kaibeppu/', map: 'https://www.google.com/maps/search/?api=1&query=KAI+Beppu' },
+  { name: 'THE BLOSSOM HAKATA Premier', place: '福岡・博多', dates: '3/24－3/28｜4 晚', price: '¥128,022', bookingLabel: 'JR Hotel Members App', payment: '未付款・現場付款', href: 'https://www.jrk-hotels.co.jp/tw/Hakata_premier/', map: 'https://www.google.com/maps/search/?api=1&query=THE+BLOSSOM+HAKATA+Premier' },
 ];
 
 const days: Day[] = [
@@ -19,21 +19,21 @@ const days: Day[] = [
     ],
   },
   {
-    id: 'd0321', date: '2027/03/21（日）', nav: '3/21 日', place: '阿蘇', title: '福岡取車・阿蘇順向環線', route: '飯店 → Toyota Rent a Car 中洲店 → 草千里／火山博物館 → 中岳火口 → 上色見熊野座神社 → 阿蘇神社 → 龜之井酒店 阿蘇', tags: ['自駕', '順向不折返'], sleep: '龜之井酒店 阿蘇',
+    id: 'd0321', date: '2027/03/21（日）', nav: '3/21 日', place: '阿蘇', title: '福岡取車・阿蘇景點・入住門司港', route: '飯店 → Toyota Rent a Car 中洲店 → 草千里／火山博物館 → 中岳火口 → 上色見熊野座神社 → 阿蘇神社 → BEB5 門司港', tags: ['自駕', '長距離移動'], sleep: 'BEB5 門司港',
     items: [
-      { time: '08:00–09:30', title: '飯店早餐、退房、Toyota 中洲店取車', note: '09:30 前出發；確認 ETC、保險與還車時間。今天不先繞去飯店放行李，避免從阿蘇東側再折返山上；貴重物品請隨身攜帶。', links: [{ label: '租車門市 Google Maps', href: 'https://maps.app.goo.gl/8M3oEenfrbYjNLWb6' }, { label: '整日順向導航', href: 'https://www.google.com/maps/dir/?api=1&origin=Toyota+Rent+a+Car+Nakasu+Fukuoka&destination=Kamenoi+Hotel+Aso&travelmode=driving&waypoints=Kusasenri+Aso%7CAso+Nakadake+Crater%7CKamishikimi+Kumanoimasu+Shrine%7CAso+Shrine' }] },
-      { time: '11:45–13:30', title: '草千里・阿蘇火山博物館・午餐', note: '先抵達阿蘇西側山上，景點與午餐集中在同一區域。博物館目前 17:00 關館。', links: [{ label: '草千里 Google Maps', href: 'https://www.google.com/maps/search/?api=1&query=Kusasenri+Aso' }, { label: '火山博物館 Google Maps', href: 'https://www.google.com/maps/search/?api=1&query=Aso+Volcano+Museum' }, { label: '博物館官方網站', href: 'https://www.asomuse.jp/' }] },
-      { time: '13:40–14:30', title: '中岳火口', note: '由草千里繼續向東，不走回頭路；是否開放以當日火山與氣象管制為準。', links: [{ label: '中岳火口 Google Maps', href: 'https://www.google.com/maps/search/?api=1&query=Aso+Nakadake+Crater' }, { label: '火口即時管制', href: 'https://www.aso-volcano.jp/eng/' }] },
-      { time: '15:20–16:20', title: '上色見熊野座神社', note: '從火口往南阿蘇方向下山，參拜後再沿東側北上。', links: [{ label: 'Google Maps', href: 'https://www.google.com/maps/search/?api=1&query=Kamishikimi+Kumanoimasu+Shrine' }] },
-      { time: '17:10–17:35', title: '阿蘇神社', note: '順路短停；拜殿目前開放至 18:00，但御札所 17:00 結束。若前段延誤，改到 3/22 早餐後再來。', links: [{ label: 'Google Maps', href: 'https://www.google.com/maps/search/?api=1&query=Aso+Shrine' }, { label: '阿蘇神社官方網站', href: 'https://asojinja.or.jp/' }] },
-      { time: '17:45–18:15', title: '龜之井酒店 阿蘇入住', note: '飯店就在阿蘇神社東側，作為今日終點最順。', links: [{ label: '飯店 Google Maps', href: 'https://www.google.com/maps/search/?api=1&query=Kamenoi+Hotel+Aso' }] },
-      { time: '18:30 起', title: '飯店晚餐', note: '官方目前晚餐供應為 17:45–21:00；實際用餐梯次待訂房後確認。', links: [{ label: '飯店餐廳資訊', href: 'https://kamenoi-hotels.com/aso/restaurant/' }] },
+      { time: '08:00–09:30', title: '飯店早餐、退房、Toyota 中洲店取車', note: '09:30 前出發；確認 ETC、保險與還車時間。行李放車上，貴重物品請隨身攜帶。', links: [{ label: '租車門市 Google Maps', href: 'https://maps.app.goo.gl/8M3oEenfrbYjNLWb6' }, { label: '整日順向導航', href: 'https://www.google.com/maps/dir/?api=1&origin=Toyota+Rent+a+Car+Nakasu+Fukuoka&destination=BEB5+Mojiko+by+Hoshino+Resorts&travelmode=driving&waypoints=Kusasenri+Aso%7CAso+Nakadake+Crater%7CKamishikimi+Kumanoimasu+Shrine%7CAso+Shrine' }] },
+      { time: '11:45–13:15', title: '草千里・阿蘇火山博物館・午餐', note: '景點與午餐集中在同一區域；因晚上需前往門司港，停留時間稍微縮短。', links: [{ label: '草千里 Google Maps', href: 'https://www.google.com/maps/search/?api=1&query=Kusasenri+Aso' }, { label: '火山博物館 Google Maps', href: 'https://www.google.com/maps/search/?api=1&query=Aso+Volcano+Museum' }, { label: '博物館官方網站', href: 'https://www.asomuse.jp/' }] },
+      { time: '13:25–14:10', title: '中岳火口', note: '是否開放以當日火山與氣象管制為準。', links: [{ label: '中岳火口 Google Maps', href: 'https://www.google.com/maps/search/?api=1&query=Aso+Nakadake+Crater' }, { label: '火口即時管制', href: 'https://www.aso-volcano.jp/eng/' }] },
+      { time: '15:00–16:00', title: '上色見熊野座神社', note: '參拜後沿阿蘇東側北上，不需折返山頂。', links: [{ label: 'Google Maps', href: 'https://www.google.com/maps/search/?api=1&query=Kamishikimi+Kumanoimasu+Shrine' }] },
+      { time: '16:45–17:10', title: '阿蘇神社', note: '順路短停；若前段延誤則略過，優先避免太晚抵達門司港。', links: [{ label: 'Google Maps', href: 'https://www.google.com/maps/search/?api=1&query=Aso+Shrine' }, { label: '阿蘇神社官方網站', href: 'https://asojinja.or.jp/' }] },
+      { time: '17:10–20:00', title: '開車前往門司港・途中晚餐', note: '這段是當日最長車程，建議途中休息並簡單用餐。', links: [{ label: '前往飯店 Google Maps', href: 'https://www.google.com/maps/dir/?api=1&origin=Aso+Shrine&destination=BEB5+Mojiko+by+Hoshino+Resorts&travelmode=driving' }] },
+      { time: '20:00 前後', title: 'BEB5 門司港入住', links: [{ label: '飯店 Google Maps', href: 'https://www.google.com/maps/search/?api=1&query=BEB5+Mojiko+by+Hoshino+Resorts' }] },
     ],
   },
   {
-    id: 'd0322', date: '2027/03/22（一）', nav: '3/22 一', place: '別府', title: '阿蘇前往別府', route: '阿蘇飯店 → 九州自然動物公園／鶴見岳（二選一）→ 界 別府', tags: ['移動日', '景點二選一'], sleep: '界 別府',
+    id: 'd0322', date: '2027/03/22（一）', nav: '3/22 一', place: '別府', title: '門司港前往別府', route: 'BEB5 門司港 → 門司港周邊 → 九州自然動物公園／鶴見岳（二選一）→ 界 別府', tags: ['移動日', '景點二選一'], sleep: '界 別府',
     items: [
-      { time: '08:00–09:30', title: '飯店早餐、退房', links: [{ label: '飯店 Google Maps', href: 'https://www.google.com/maps/search/?api=1&query=Kamenoi+Hotel+Aso' }] },
+      { time: '08:00–09:30', title: '門司港早餐、飯店退房', note: '可在門司港周邊短暫散步後出發。', links: [{ label: '飯店 Google Maps', href: 'https://www.google.com/maps/search/?api=1&query=BEB5+Mojiko+by+Hoshino+Resorts' }, { label: '門司港 Google Maps', href: 'https://www.google.com/maps/search/?api=1&query=Mojiko+Retro' }] },
       { time: '上午–下午', title: '九州自然動物公園或鶴見岳（二選一）', note: '較推薦九州自然動物公園；若天氣非常好且想看山景，再改鶴見岳。', links: [{ label: '動物園 Google Maps', href: 'https://www.google.com/maps/search/?api=1&query=African+Safari+Oita' }, { label: '動物園官方網站', href: 'https://www.africansafari.co.jp/' }, { label: '鶴見岳 Google Maps', href: 'https://www.google.com/maps/search/?api=1&query=Beppu+Ropeway' }] },
       { time: '15:30 前後', title: '界 別府入住', note: '保留旅館活動與溫泉時間。', links: [{ label: '界 別府 Google Maps', href: 'https://www.google.com/maps/search/?api=1&query=KAI+Beppu' }, { label: '界 別府官方網站', href: 'https://hoshinoresorts.com/zh_tw/hotels/kaibeppu/' }] },
       { time: '17:30', title: '飯店晚餐', note: '固定用餐時間，行程請預留準時返回飯店。', reserved: true },
@@ -113,7 +113,7 @@ export default function Home() {
 
     <main>
       <nav className="nav" aria-label="行程日期快速跳轉">
-        <a href="#stay">🏨 住宿</a><a href="#tickets">📝 待預訂</a>
+        <a href="#stay">🏨 住宿</a><a href="#tickets">📝 待處理</a>
         {days.map((day) => <a href={`#${day.id}`} key={day.id}>{day.nav}<span>{day.place}</span></a>)}
         <a href="#notes">📌 提醒</a>
       </nav>
@@ -122,15 +122,13 @@ export default function Home() {
 
       <section className="stay-section" id="stay">
         <h2>住宿與跨城交通</h2>
-        <p className="price-summary"><span>房價概算</span>4 間飯店・8 晚合計預估 <strong>¥332,464～341,704</strong></p>
-        <div className="stay-grid">{stays.map((stay) => <article className="stay-card" key={stay.name}><div className="stay-title"><strong>{stay.name}</strong><span className="badge">{stay.place}</span></div><p className="dates">{stay.dates}</p><div className="stay-price"><span>{stay.priceLabel}</span><strong>{stay.price}</strong><small>{stay.priceNote}</small></div><p>{stay.status}</p><div className="links"><a className="btn" href={stay.href} target="_blank" rel="noreferrer">官方網站</a><a className="btn" href={stay.map} target="_blank" rel="noreferrer">Google Maps</a></div></article>)}</div>
+        <p className="price-summary"><span>住宿已訂妥</span>4 間飯店・8 晚合計 <strong>¥301,604</strong></p>
+        <div className="stay-grid">{stays.map((stay) => <article className="stay-card" key={stay.name}><div className="stay-title"><strong>{stay.name}</strong><div className="stay-meta"><span className="badge">{stay.place}</span>{stay.bookingHref ? <a className="booking-source" href={stay.bookingHref} target="_blank" rel="noreferrer">{stay.bookingLabel}</a> : <span className="booking-source">{stay.bookingLabel}</span>}{stay.payment && <span className="payment-status">{stay.payment}</span>}</div></div><p className="stay-facts">{stay.dates}<span>住宿總額：<strong>{stay.price}</strong>{stay.priceNote && `（${stay.priceNote}）`}</span></p><div className="links"><a className="btn" href={stay.href} target="_blank" rel="noreferrer">官方網站</a><a className="btn" href={stay.map} target="_blank" rel="noreferrer">Google Maps</a></div></article>)}</div>
       </section>
 
       <section className="booking-section" id="tickets">
-        <h2>待預訂</h2>
+        <h2>待處理</h2>
         <div className="booking-grid">
-          <article className="booking-card"><strong>3/20｜三井花園飯店福岡中洲</strong><span className="pending">尚未訂房</span><p>3/20 入住、3/21 退房，共 1 晚；Booking.com 比較便宜。</p><Links links={[{ label: '飯店官方網站', href: stays[0].href }, { label: 'Google Maps', href: stays[0].map }]} /></article>
-          <article className="booking-card"><strong>3/21｜龜之井酒店 阿蘇</strong><span className="pending">尚未訂房</span><p>3/21 入住、3/22 退房，共 1 晚；希望含晚餐，Booking.com 比較便宜。</p><Links links={[{ label: '飯店官方網站', href: stays[1].href }, { label: 'Google Maps', href: stays[1].map }]} /></article>
           <article className="booking-card"><strong>3/21 起｜Toyota Rent a Car</strong><span className="pending">尚未訂車</span><p>早餐後取車；暫定 3/24 晚上還車，若門市時間不合就延至 3/25 早上。</p><Links links={[{ label: '預計租車門市', href: 'https://maps.app.goo.gl/8M3oEenfrbYjNLWb6' }]} /></article>
           <article className="booking-card"><strong>3/26 19:00｜藥院燒肉 NIKUICHI</strong><span className="pending">尚未訂位</span><p>週五熱門時段，記得在訂位開放後優先預約 19:00；建議加購粗烤網。</p><Links links={[{ label: 'Tabelog', href: 'https://tabelog.com/fukuoka/A4001/A400104/40039111/' }, { label: 'Google Maps', href: 'https://www.google.com/maps/search/?api=1&query=Yakuin+Yakiniku+NIKUICHI+Fukuoka' }, { label: '官方網站', href: 'https://www.yakiniku-nikuichi.com/' }]} /></article>
         </div>
@@ -145,7 +143,7 @@ export default function Home() {
       <section className="day" id="notes"><h2>出發前提醒</h2><div className="items">
         <article className="item"><strong>阿蘇火口</strong><p className="note">出發當天查看官方管制；若關閉，改增加草千里、博物館或阿蘇神社停留時間。</p><Links links={[{ label: '火口即時管制', href: 'https://www.aso-volcano.jp/eng/' }]} /></article>
         <article className="item"><strong>租車</strong><p className="note">確認 ETC 卡、保險、駕照日文譯本、還車門市，以及三月底山區的輪胎需求。</p></article>
-        <article className="item"><strong>旅館晚餐</strong><p className="note">龜之井與界的晚餐時段確認後，優先鎖定 Day 02–04 的最晚抵達時間。</p></article>
+        <article className="item"><strong>旅館晚餐</strong><p className="note">界 別府 3/22 的晚餐時間為 17:30，當日行程需準時返回飯店。</p></article>
       </div></section>
     </main>
     <a className="top-button" href="#" aria-label="回到頁面頂端">↑</a>
