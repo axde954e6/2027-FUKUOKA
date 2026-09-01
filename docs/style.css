@@ -44,11 +44,11 @@ main { width: min(980px, 100%); margin: 0 auto; padding: 18px 14px 64px; }
 .stay-section h2 { margin: 0 0 10px; font-size: 1.2rem; color: var(--road); }
 .stay-grid { display: grid; grid-template-columns: repeat(2,minmax(0,1fr)); gap: 10px; }
 .stay-card, .item { padding: 12px; border: 1px solid var(--line); border-radius: 8px; background: var(--card); box-shadow: 0 2px 8px rgba(21,49,73,.05); }
-.stay-title { margin-bottom: 8px; }
+.stay-title { display: grid; grid-template-columns: minmax(0, 1fr); row-gap: 6px; margin-bottom: 8px; }
 .stay-card p { margin: 0; color: var(--muted); font-size: .93rem; }
 .stay-card .dates { margin-bottom: 5px; color: var(--ink); font-weight: 750; }
 .stay-heading { display: flex; justify-content: space-between; align-items: flex-start; gap: 10px; }
-.stay-booking-row, .stay-payment-row { display: block; margin-top: 6px; }
+.stay-booking-row { display: flex; width: 100%; flex-wrap: wrap; gap: 6px; }
 .booking-source, .payment-status { display: inline-block; padding: 3px 8px; border-radius: 999px; background: var(--blush); color: var(--ink); font-size: .72rem; font-weight: 850; text-decoration: none; }
 a.booking-source:hover { text-decoration: underline; }
 .payment-status { background: #fff2df; color: #8a4f24; }
