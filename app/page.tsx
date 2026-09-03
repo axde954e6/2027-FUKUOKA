@@ -30,7 +30,7 @@ const days: Day[] = [
       { time: '下午', title: '前往門司港・BEB5 Check-in', note: '下午前往門司港，抵達後先辦理 BEB5門司港 Check-in。原則上將車停好，再以步行方式遊覽門司港。', links: [{ label: '飯店 Google Maps', href: 'https://www.google.com/maps/search/?api=1&query=BEB5+Mojiko+by+Hoshino+Resorts' }] },
       { time: '下午～傍晚', title: '門司港懷舊散步', note: '建議順序：門司港站 → 舊門司三井俱樂部 → 海峽廣場 → Blue Wing Moji → 門司港懷舊街區。Check-in 後以步行為主，不需要在門司港懷舊區內頻繁移動車輛。', links: [{ label: 'Google Maps', href: 'https://www.google.com/maps/search/?api=1&query=Mojiko+Retro' }] },
       { time: '傍晚～晚上', title: '門司港燒咖哩', note: '門司港散步途中或結束後安排燒咖哩，實際餐廳之後再決定。' },
-      { time: '晚上', title: '皿倉山纜車・夜景（天氣良好時）', note: '視當天天氣、能見度與纜車營運狀況決定是否前往。若下雨、濃霧或能見度不佳，直接取消並留在門司港／BEB5休息。2027 年正式營業時間公布後再確認末班時間。', links: [{ label: 'Google Maps', href: 'https://www.google.com/maps/search/?api=1&query=Sarakurayama+Cable+Car' }] },
+      { time: '晚上', title: '皿倉山纜車・夜景（天氣良好時）', note: '視當天天氣、能見度與纜車營運狀況決定是否前往。若皿倉山天候不佳，改到門司港展望台，以室內觀景作為備案；若港區能見度仍差，則取消夜景行程並留在門司港／BEB5休息。2027 年正式營業時間公布後再確認末班時間。', links: [{ label: '皿倉山 Google Maps', href: 'https://www.google.com/maps/search/?api=1&query=Sarakurayama+Cable+Car' }, { label: '備案｜門司港展望台 Google Maps', href: 'https://maps.app.goo.gl/nExzfrnwxRyje13EA' }] },
       { time: '晚上', title: '返回 BEB5門司港', note: '返回飯店後休息，可使用飯店設施；不再安排其他跨區景點。若皿倉山取消，則直接在門司港與飯店休息。', links: [{ label: '飯店 Google Maps', href: 'https://www.google.com/maps/search/?api=1&query=BEB5+Mojiko+by+Hoshino+Resorts' }] },
     ],
   },
