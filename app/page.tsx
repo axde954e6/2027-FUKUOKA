@@ -114,7 +114,7 @@ export default function Home() {
       <div className="hero-inner">
         <p className="kicker">FUKUOKA TRIP 2027</p>
         <h1>福岡 9 日自由行</h1>
-        <p className="subtitle">2027/03/20–03/28｜福岡、阿蘇、別府、由布院與糸島的春季自駕旅行。</p>
+        <p className="subtitle">2027/03/20–03/28｜福岡、門司港、別府、由布院與糸島的春季自駕旅行。</p>
         <div className="summary"><span className="pill">✈ 桃園 ⇄ 福岡</span><span className="pill">🏨 4 間飯店・8 晚</span><span className="pill">🚗 前半段自駕</span><span className="pill">👟 後半段福岡慢遊</span></div>
       </div>
     </header>
@@ -126,7 +126,7 @@ export default function Home() {
         <a href="#notes">📌 提醒</a>
       </nav>
 
-      <div className="notice"><strong>行程說明：</strong>航班與已訂住宿已固定；景點時間與自駕車程先依合理動線暫排，2027 正式營業資訊公布後再確認。阿蘇中岳火口是否開放，以當日火山與氣象管制為準。</div>
+      <div className="notice"><strong>行程說明：</strong>航班與已訂住宿已固定；景點時間與自駕車程先依合理動線暫排，2027 正式營業資訊公布後再確認。</div>
 
       <section className="stay-section" id="stay">
         <h2>住宿與跨城交通</h2>
