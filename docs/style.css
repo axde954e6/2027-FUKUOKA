@@ -48,6 +48,7 @@ main { width: min(980px, 100%); margin: 0 auto; padding: 18px 14px 64px; }
 .stay-card p { margin: 0; color: var(--muted); font-size: .93rem; }
 .stay-card .dates { margin-bottom: 5px; color: var(--ink); font-weight: 750; }
 .stay-heading { display: flex; justify-content: space-between; align-items: flex-start; gap: 10px; }
+.stay-markers { display: flex; flex-shrink: 0; flex-wrap: wrap; justify-content: flex-end; gap: 6px; }
 .stay-booking-row { display: flex; width: 100%; flex-wrap: wrap; gap: 6px; }
 .booking-source, .payment-status { display: inline-block; padding: 3px 8px; border-radius: 999px; background: var(--blush); color: var(--ink); font-size: .72rem; font-weight: 850; text-decoration: none; }
 a.booking-source:hover { text-decoration: underline; }
