@@ -56,11 +56,13 @@ const days: Day[] = [
     ],
   },
   {
-    id: 'd0324', date: '2027/03/24（三）', nav: '3/24 三', place: '糸島', title: '別府・糸島・返回福岡', route: '界 別府 → 糸島 → 櫻井二見浦 → 博多飯店 → 還車', tags: ['自駕', '糸島'], sleep: 'THE BLOSSOM HAKATA Premier',
+    id: 'd0324', date: '2027/03/24（三）', nav: '3/24 三', place: '糸島', title: '別府・糸島・返回福岡', route: '界 別府 → 豐後牛排館 そむり 別府本店 → 糸島 → 櫻井二見浦 → 博多飯店 → 還車', tags: ['自駕', '糸島'], sleep: 'THE BLOSSOM HAKATA Premier',
     items: [
-      { time: '09:30 前', title: '旅館早餐、退房、前往糸島', links: [{ label: '糸島 Google Maps', href: 'https://www.google.com/maps/search/?api=1&query=Itoshima+Fukuoka' }] },
-      { time: '12:30–16:00', title: '糸島午餐・櫻井二見浦・海邊咖啡', note: '若天候不佳可直接回福岡，將糸島改到隔日。', links: [{ label: '櫻井二見浦 Google Maps', href: 'https://www.google.com/maps/search/?api=1&query=Sakurai+Futamigaura' }] },
-      { time: '17:30', title: 'THE BLOSSOM HAKATA Premier 入住', links: [{ label: '飯店 Google Maps', href: 'https://www.google.com/maps/search/?api=1&query=THE+BLOSSOM+HAKATA+Premier' }] },
+      { time: '早餐', title: '界 別府早餐、退房', note: '早餐後可稍微使用旅館設施並整理行李，不需設定非常精確的退房時間。' },
+      { time: '11:30', title: '豐後牛排館 そむり 別府本店', pending: true, note: '別府代表性的豐後牛排餐廳，目前先暫定 11:30 午餐。Tabelog 顯示可預約；2027 年正式營業時間與預約開放後再確認。', links: [{ label: 'Google Maps', href: 'https://maps.app.goo.gl/4xFuwxqRTubYQ5Lf6' }, { label: 'Tabelog 查看／訂位', href: 'https://tabelog.com/oita/A4402/A440202/44003334/' }] },
+      { time: '下午', title: '前往糸島', note: '豐後牛午餐結束後，再從別府出發前往糸島。', links: [{ label: '糸島 Google Maps', href: 'https://www.google.com/maps/search/?api=1&query=Itoshima+Fukuoka' }] },
+      { time: '下午', title: '糸島・櫻井二見浦・海邊散步／咖啡', note: '午餐後由別府前往糸島，以櫻井二見浦與海邊景色為主要行程；因上午安排豐後牛午餐，當天依抵達時間彈性調整停留長度。若交通延誤或天候不佳，可縮短糸島行程並優先返回福岡。', links: [{ label: '櫻井二見浦 Google Maps', href: 'https://www.google.com/maps/search/?api=1&query=Sakurai+Futamigaura' }] },
+      { time: '傍晚', title: 'THE BLOSSOM HAKATA Premier 入住', links: [{ label: '飯店 Google Maps', href: 'https://www.google.com/maps/search/?api=1&query=THE+BLOSSOM+HAKATA+Premier' }] },
       { time: '18:30 前後', title: 'Toyota Rent a Car 還車', note: '若門市時間不合，延到 3/25 早上還車。', links: [{ label: '租車門市 Google Maps', href: 'https://maps.app.goo.gl/8M3oEenfrbYjNLWb6' }] },
     ],
   },
@@ -136,6 +138,7 @@ export default function Home() {
         <h2>待處理</h2>
         <div className="booking-grid">
           <article className="booking-card"><strong>3/21 起｜Toyota Rent a Car</strong><span className="pending">尚未訂車</span><p>早餐後取車；暫定 3/24 晚上還車，若門市時間不合就延至 3/25 早上。</p><Links links={[{ label: '預計租車門市', href: 'https://maps.app.goo.gl/8M3oEenfrbYjNLWb6' }]} /></article>
+          <article className="booking-card"><strong>3/24 11:30｜豐後牛排館 そむり 別府本店</strong><span className="pending">尚未訂位</span><p>別府豐後牛午餐，暫定 3/24 11:30。Tabelog 目前顯示可預約；待 2027 年訂位開放後確認並完成預約。</p><Links links={[{ label: 'Tabelog 查看／訂位', href: 'https://tabelog.com/oita/A4402/A440202/44003334/' }, { label: 'Google Maps', href: 'https://maps.app.goo.gl/4xFuwxqRTubYQ5Lf6' }]} /></article>
           <article className="booking-card"><strong>3/26 19:00｜藥院燒肉 NIKUICHI</strong><span className="pending">尚未訂位</span><p>週五熱門時段，記得在訂位開放後優先預約 19:00；建議加購粗烤網。</p><Links links={[{ label: 'Tabelog', href: 'https://tabelog.com/fukuoka/A4001/A400104/40039111/' }, { label: 'Google Maps', href: 'https://www.google.com/maps/search/?api=1&query=Yakuin+Yakiniku+NIKUICHI+Fukuoka' }, { label: '官方網站', href: 'https://www.yakiniku-nikuichi.com/' }]} /></article>
         </div>
       </section>
