@@ -3,10 +3,10 @@ type Item = { time: string; title: string; note?: string; links?: Link[]; flight
 type Day = { id: string; date: string; nav: string; place: string; title: string; route: string; tags: string[]; sleep?: string; items: Item[] };
 
 const stays = [
-  { name: '三井花園飯店福岡中洲', place: '福岡・中洲', dates: '3/20－3/21｜1 晚', price: '¥42,402', priceNote: '含早餐', bookingLabel: 'Booking.com', href: 'https://www.gardenhotels.co.jp/fukuoka-nakasu/tw/', map: 'https://www.google.com/maps/search/?api=1&query=Mitsui+Garden+Hotel+Fukuoka+Nakasu' },
+  { name: '三井花園飯店福岡中洲', place: '福岡', dates: '3/20－3/21｜1 晚', price: '¥42,402', priceNote: '含早餐', bookingLabel: 'Booking.com', href: 'https://www.gardenhotels.co.jp/fukuoka-nakasu/tw/', map: 'https://www.google.com/maps/search/?api=1&query=Mitsui+Garden+Hotel+Fukuoka+Nakasu' },
   { name: 'BEB5 門司港 by 星野集團', place: '門司港', dates: '3/21－3/22｜1 晚', price: '¥24,140', bookingLabel: '訂房資訊', bookingHref: 'https://hoshinoresorts.com/reservations/#/CH/hotels/0000000206', href: 'https://hoshinoresorts.com/zh_tw/hotels/beb5mojiko/', map: 'https://www.google.com/maps/search/?api=1&query=BEB5+Mojiko+by+Hoshino+Resorts' },
   { name: '星野集團 界 別府', place: '別府', dates: '3/22－3/24｜2 晚', price: '¥107,040', bookingLabel: '訂房資訊', bookingHref: 'https://hoshinoresorts.com/reservations/#/CH/hotels/0000000206', href: 'https://hoshinoresorts.com/zh_tw/hotels/kaibeppu/', map: 'https://www.google.com/maps/search/?api=1&query=KAI+Beppu' },
-  { name: 'THE BLOSSOM HAKATA Premier', place: '福岡・博多', dates: '3/24－3/28｜4 晚', price: '¥128,022', bookingLabel: 'JR Hotel Members App', payment: '現場付款', href: 'https://www.jrk-hotels.co.jp/tw/Hakata_premier/', map: 'https://www.google.com/maps/search/?api=1&query=THE+BLOSSOM+HAKATA+Premier' },
+  { name: 'THE BLOSSOM HAKATA Premier', place: '福岡', dates: '3/24－3/28｜4 晚', price: '¥128,022', bookingLabel: 'JR Hotel Members App', payment: '現場付款', href: 'https://www.jrk-hotels.co.jp/tw/Hakata_premier/', map: 'https://www.google.com/maps/search/?api=1&query=THE+BLOSSOM+HAKATA+Premier' },
 ];
 
 const days: Day[] = [
