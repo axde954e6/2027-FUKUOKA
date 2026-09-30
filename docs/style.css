@@ -17,7 +17,7 @@
 html { scroll-behavior: smooth; }
 body { margin: 0; font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", "Noto Sans TC", sans-serif; color: var(--ink); background: linear-gradient(180deg, #fff 0, #f2f8f9 300px); line-height: 1.55; }
 a { color: inherit; }
-.hero { position: relative; display: flex; align-items: flex-end; aspect-ratio: 5 / 1; min-height: 110px; padding: 0; color: #fff; background: linear-gradient(180deg, rgba(18,58,74,0) 45%, rgba(18,58,74,.78) 100%), url('fukuoka-banner.jpg') center / cover no-repeat; }
+.hero { position: relative; display: flex; align-items: flex-end; height: clamp(110px, 20vw, 240px); padding: 0; color: #fff; background: linear-gradient(180deg, rgba(18,58,74,0) 45%, rgba(18,58,74,.78) 100%), url('fukuoka-banner.jpg') center / cover no-repeat; }
 .hero-inner { width: 100%; margin: 0; padding: 0 18px 12px; }
 .kicker, .summary { display: none; }
 h1 { margin: 0 0 2px; font-size: clamp(1.15rem, 2.6vw, 1.7rem); line-height: 1.15; text-shadow: 0 1px 4px rgba(0,0,0,.45); }
